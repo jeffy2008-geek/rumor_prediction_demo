@@ -44,7 +44,7 @@ if __name__ == '__main__':
     st.markdown("Potential NBA Rumors Updated Daily", unsafe_allow_html=True)
 
     # 2. Mock Dataset Creator
-    @st.cache_data
+    @st.cache_data(ttl=600)
     def load_rumor_data():
         return pd.read_csv('rumors.csv')
         
